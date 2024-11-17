@@ -23,6 +23,9 @@ function updateWeather(response) {
   let dayElement = document.querySelector("#dayTime");
   let date = new Date(response.data.time * 1000);
   dayElement.innerHTML = formatDate(date);
+
+  let icon = document.querySelector("#weather-icon");
+  icon.innerHTML = `<img src="${response.data.condition.icon_url}">`;
 }
 
 function formatDate(date) {
