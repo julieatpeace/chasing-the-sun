@@ -10,18 +10,20 @@
       href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Ojuju:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Solway:wght@300;400;500;700;800&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <title>Chasing some sun ☀</title>
   </head>
   <body>
     <div class="container">
       <div class="weather-app">
         <header>
-          <form class="search-form">
+          <form class="search-form" id="search-form">
             <input
               type="search"
               placeholder="Enter a city..."
               required
               class="search-form-input"
+              id="search-form-input"
             />
             <input type="submit" value="search" class="search-form-button" />
           </form>
@@ -31,11 +33,15 @@
             <div>
               <div class="temperature">
                 <div class="weather-icon">☀</div>
-                <div class="weather-temperature">12</div>
+                <div class="weather-temperature" id="weather-temperature"></div>
                 <div class="weather-unit">°C</div>
               </div>
               <div class="weather">Scattered clouds</div>
-              <div class="city"><strong>San Salvador, El Salvador</strong></div>
+              <div
+                class="city purplecolor"
+                id="city"
+                style="font-weight: bold"
+              ></div>
               <div>Tuesday, 09:00</div>
               <div>
                 Humidity: <span class="purplecolor">70%</span>, wind:
