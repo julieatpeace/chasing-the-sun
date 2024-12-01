@@ -26,6 +26,8 @@ function updateWeather(response) {
 
   let icon = document.querySelector("#weather-icon");
   icon.innerHTML = `<img src="${response.data.condition.icon_url}">`;
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -65,4 +67,44 @@ function handleSearchSubmit(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSearchSubmit);
 
+function getForecast(city) {
+  let apiKey = "ad37dbed19e0t4f4c2c6267790bao7f4";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
+function displayForecast(response) {
+  let forecastHtml = "";
+
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `
+  <div class="weather-forecast-day">
+  <div class="weather-forecast-date">${formatDay(day.time)}</div>
+  <img class="weather-forecast-icon" src="${day.condition.icon_url}">
+  <div class="weather-forecast-temperatures">
+    <div class="weather-forecast-temperature"><strong>${Math.round(
+      day.temperature.maximum
+    )}°</strong></div> 
+    <div class="weather-forecast-temperature">${Math.round(
+      day.temperature.minimum
+    )}°</div>
+  </div>
+  </div> `;
+    }
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 searchCity("San Salvador");
+displayForecast();
