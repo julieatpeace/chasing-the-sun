@@ -17,35 +17,55 @@
     <div class="container">
       <div class="weather-app">
         <header>
-          <form class="search-form" id="search-form">
-            <input
-              type="search"
-              placeholder="Enter a city..."
-              required
-              class="search-form-input"
-              id="search-form-input"
-            />
-            <input type="submit" value="search" class="search-form-button" />
-          </form>
+          <center>
+            <div>
+              <form class="search-form" id="search-form">
+                <input
+                  type="search"
+                  placeholder="Enter a city..."
+                  required
+                  class="search-form-input"
+                  id="search-form-input"
+                />
+                <input
+                  type="submit"
+                  value="search"
+                  class="search-form-button"
+                />
+              </form>
+            </div>
+          </center>
         </header>
         <main>
           <div class="wrapper">
             <div>
               <div class="temperature">
-                <div id="weather-icon" class="weather-icon"></div>
                 <div class="weather-temperature" id="weather-temperature"></div>
                 <div class="weather-unit">°C</div>
+                <div class="circle"></div>
               </div>
-              <div class="weather" id="description"></div>
               <div
-                class="city purplecolor"
-                id="city"
-                style="font-weight: bold"
-              ></div>
-              <div><span id="dayTime"></span></div>
-              <div>
-                Humidity: <span id="humidity" class="purplecolor"></span>, wind:
-                <span id="wind" class="purplecolor"></span>
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <div id="weather-icon"></div>
+                <div class="weather" id="description"></div>
+              </div>
+              <div style="padding-top: 30px; padding-bottom: 30px">
+                <div
+                  class="city purplecolor"
+                  id="city"
+                  style="font-weight: bold"
+                ></div>
+                <div><span id="dayTime"></span></div>
+                <div>
+                  Humidity: <span id="humidity" class="purplecolor"></span>,
+                  wind:
+                  <span id="wind" class="purplecolor"></span>
+                </div>
               </div>
             </div>
           </div>
