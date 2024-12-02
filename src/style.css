@@ -9,33 +9,33 @@
 }
 
 body {
-  background: #fff3f3;
+  background: #c8f0ff;
   font-family: "Poppins", sans-serif;
 }
 
 main {
   padding: 60px 0 0px 0;
   text-align: center;
-  color: rgb(89, 73, 90);
+  color: #35465c;
 }
 
 footer {
   padding: 30px 0 0 0;
   font-size: 15px;
-  color: rgb(0, 0, 0, 0.6);
+  color: #35465c;
   text-align: center;
 }
 
 a {
-  color: rgb(170, 63, 63);
+  color: rgb(35, 154, 190);
 }
 
 strong {
-  color: rgb(170, 63, 63);
+  color: rgb(35, 154, 190);
 }
 
 .purplecolor {
-  color: rgb(170, 63, 63);
+  color: rgb(35, 154, 190);
 }
 
 .temperature {
@@ -78,13 +78,13 @@ strong {
 
 .search-form-input {
   background-color: rgb(0, 0, 0, 0);
-  color: rgb(75, 63, 63);
+  color: #35465c;
   border: 0;
-  border-bottom: solid 2px rgb(75, 63, 63);
+  border-bottom: solid 2px #35465c;
   width: 300px;
   padding: 15px 20px;
   font-family: "Poppins", sans-serif;
-  color: rgb(75, 63, 63);
+  color: #35465c;
 }
 
 .search-form-input :focus {
@@ -92,13 +92,13 @@ strong {
 }
 
 .search-form-button {
-  background-color: rgb(0, 0, 0, 0);
-  border: solid 2px rgb(75, 63, 63);
+  background-color: #ffffff;
+  border: solid 2px #35465c;
   border-radius: 6px;
   margin-left: 5px;
-  padding: 15px 25px;
+  padding: 10px 25px;
   font-family: "Poppins", sans-serif;
-  color: rgb(75, 63, 63);
+  color: #35465c;
 }
 
 .weather-forecast-date {
@@ -116,7 +116,7 @@ strong {
 .weather-forecast-temperatures {
   text-align: center;
   line-height: 38px;
-  color: rgb(170, 63, 63);
+  color: rgb(35, 154, 190);
   display: flex;
   justify-content: center;
 }
@@ -129,8 +129,9 @@ strong {
   display: flex;
   justify-content: space-around;
   margin: 20px 0 20px 0;
-  background: #ffe9e9;
+  background: rgba(255, 255, 255, 0.4);
   padding: 10px 10px 10px 10px;
+  box-shadow: #35465c;
   border-radius: 15px;
 }
 
@@ -140,7 +141,7 @@ strong {
   height: 600px;
   border-radius: 100%;
   background: radial-gradient(#fadf97, #ffffff, #e19665);
-  filter: blur(40px);
+  filter: blur(60px);
   position: absolute;
   z-index: -1;
 }

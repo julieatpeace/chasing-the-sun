@@ -25,7 +25,7 @@ function updateWeather(response) {
   dayElement.innerHTML = formatDate(date);
 
   let icon = document.querySelector("#weather-icon");
-  icon.innerHTML = `<img class=weather-icon-px src="${response.data.condition.icon_url}">`;
+  icon.setAttribute("src", `${response.data.condition.icon_url}`);
 
   getForecast(response.data.city);
 }
