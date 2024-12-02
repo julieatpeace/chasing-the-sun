@@ -100,22 +100,23 @@ strong {
 
 .search-form-button {
   background-color: rgba(255, 255, 255, 0);
-  border: solid 2px #35465c;
+  border: solid 1px #35465c;
   border-radius: 6px;
   margin-left: 5px;
   padding: 10px 22px;
   font-family: "Poppins", sans-serif;
   color: #35465c;
+  transition: 0.1s ease-in-out;
 }
 
 .search-form-button:hover {
-  border: solid 2px rgb(35, 154, 190);
+  border: solid 1px rgb(35, 154, 190);
   color: rgb(35, 154, 190);
 }
 
 .search-form-button:active {
   background-color: rgba(0, 0, 0, 0.03);
-  border: solid 2px rgb(53, 70, 92, 0.7);
+  border: solid 1px rgb(53, 70, 92, 0.7);
   color: rgb(53, 70, 92, 0.7);
 }
 
