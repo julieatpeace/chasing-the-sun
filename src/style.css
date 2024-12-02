@@ -22,7 +22,7 @@ main {
 header {
   width: 400px;
   background: rgba(255, 255, 255, 0.4);
-  padding: 10px;
+  padding: 10px 00px;
   border-radius: 10px;
 }
 
@@ -84,7 +84,7 @@ strong {
 }
 
 .search-form-input {
-  width: 290px;
+  width: 270px;
   background-color: rgb(0, 0, 0, 0);
   color: #35465c;
   border: 0;
