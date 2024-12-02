@@ -25,7 +25,7 @@ function updateWeather(response) {
   dayElement.innerHTML = formatDate(date);
 
   let icon = document.querySelector("#weather-icon");
-  icon.setAttribute("src", `${response.data.condition.icon_url}`);
+  icon.setAttribute("src", `img/${response.data.condition.icon}.png`);
 
   getForecast(response.data.city);
 }
@@ -90,7 +90,7 @@ function displayForecast(response) {
         `
   <div class="weather-forecast-day">
   <div class="weather-forecast-date">${formatDay(day.time)}</div>
-  <img class="weather-forecast-icon" src="${day.condition.icon_url}">
+  <img class="weather-forecast-icon" src="img/${day.condition.icon}.png">  
   <div class="weather-forecast-temperatures">
     <div class="weather-forecast-temperature"><strong>${Math.round(
       day.temperature.maximum

@@ -19,6 +19,13 @@ main {
   color: #35465c;
 }
 
+header {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 10px;
+  border-radius: 10px;
+}
+
 footer {
   padding: 30px 0 0 0;
   font-size: 15px;
@@ -52,8 +59,9 @@ strong {
   text-transform: uppercase;
 }
 
-.weather-icon-px {
-  height: 50px;
+.weather-icon {
+  height: 35px;
+  padding-right: 5px;
 }
 
 .wrapper {
@@ -107,8 +115,7 @@ strong {
 }
 
 .weather-forecast-icon {
-  width: 60px;
-  height: 60px;
+  height: 35px;
   display: block;
   margin: 0 auto;
 }
@@ -122,13 +129,13 @@ strong {
 }
 
 .weather-forecast-temperature {
-  padding: 0 10px;
+  padding: 0 5px;
 }
 
 .weather-forecast {
   display: flex;
   justify-content: space-around;
-  margin: 20px 0 20px 0;
+  margin: 10px 0 10px 0;
   background: rgba(255, 255, 255, 0.4);
   padding: 10px 10px 10px 10px;
   box-shadow: #35465c;
